@@ -69,7 +69,7 @@ public class BasePage {
             double beforeScroll, afterScroll;
             do {
                 beforeScroll = ((Number) js.executeScript("return window.scrollY;")).doubleValue();
-                pause(50); // Ждём короткий промежуток времени
+                pause(100); // Ждём короткий промежуток времени
                 afterScroll = ((Number) js.executeScript("return window.scrollY;")).doubleValue();
             } while (beforeScroll != afterScroll); // Если скролл ещё идёт, повторяем
             return true;

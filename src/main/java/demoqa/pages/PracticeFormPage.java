@@ -65,10 +65,15 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "subjectsInput")
     WebElement subjectsInput;
 
+    @FindBy(className = "subjects-auto-complete__menu")
+    WebElement subjectsMenu;
+
     public PracticeFormPage enterSubjects(String[] subjects) {
         for (String subject : subjects) {
-            type(subjectsInput, subject);
-            subjectsInput.sendKeys(Keys.ENTER);
+            //type(subjectsInput, subject);
+            subjectsInput.sendKeys(subject);
+            click(subjectsMenu);
+            //subjectsInput.sendKeys(Keys.ENTER);
             System.out.printf("✅ Subject: [%s]%n", subject);
         }
         return this;
