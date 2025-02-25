@@ -1,2 +1,0 @@
-00:10:45.826 [main] INFO  demoqa.core.TestBase -- Test is started: [switchToIFrameByNamePositiveTest]
-00:10:59.407 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [switchToIFrameByNamePositiveTest]
