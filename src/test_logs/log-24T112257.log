@@ -1,0 +1,2 @@
+11:22:58.319 [main] INFO  demoqa.core.TestBase -- Test is started: [autoCompleteSinglePositiveTest]
+11:23:02.468 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [autoCompleteSinglePositiveTest]

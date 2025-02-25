@@ -1,0 +1,38 @@
+<configuration>
+    <timestamp key="bySecond" datePattern="dd'T'HHmmss"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Определяем формат одной строки лога -->
+            <!-- %d - время, %thread - поток, %-5level - уровень логирования, %logger - имя логгера, %msg - сообщение, %n - перенос строки -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %class.%method - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Настройка вывода в файл -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>src/test_logs/log-${bySecond}.log</file>
+        <append>true</append>
+        <immediateFlush>true</immediateFlush>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Локальное повышение уровня логов для класса org.testng.internal.Utils, чтобы не выводить INFO -->
+    <logger name="org.testng.internal.Utils" level="WARN"/>
+    <logger name="io.github.bonigarcia.wdm.WebDriverManager" level="OFF"/>
+
+    <!-- ! <root level="debug">&ndash;&gt; Меняем уровень логирования на INFO-->
+    <root level="info">
+        <!--        DEBUG - Отладочные сообщения, используемые для диагностики.-->
+        <!--        INFO - Информационные сообщения, описывающие нормальную работу.-->
+        <!--        WARN - Предупреждения о потенциальных проблемах.-->
+        <!--        ERROR - Ошибки, которые требуют немедленного внимания.        -->
+
+        <!-- Подключаем вывод в консоль -->
+        <appender-ref ref="STDOUT" />
+
+        <!-- Подключаем вывод в файл -->
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

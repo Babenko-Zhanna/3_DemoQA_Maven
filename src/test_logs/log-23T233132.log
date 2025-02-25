@@ -1,0 +1,6 @@
+23:31:33.192 [main] INFO  demoqa.core.TestBase -- Test is started: [alertWithSelectedTextPositiveTest]
+23:31:35.903 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [alertWithSelectedTextPositiveTest]
+23:31:35.999 [main] INFO  demoqa.core.TestBase -- Test is started: [sendMessageToAlertPositiveTest]
+23:31:38.197 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [sendMessageToAlertPositiveTest]
+23:31:38.288 [main] INFO  demoqa.core.TestBase -- Test is started: [waitAlertTest]
+23:31:46.064 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [waitAlertTest]

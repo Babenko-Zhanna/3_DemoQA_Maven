@@ -1,0 +1,2 @@
+11:51:09.693 [main] INFO  demoqa.core.TestBase -- Test is started: [doubleClickButtonPositiveTest]
+11:51:14.234 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [doubleClickButtonPositiveTest]
